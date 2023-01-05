@@ -4,6 +4,7 @@
     In the number guessing game, the user is expected to try and guess the hidden number in program to win the game over a number of trials.
 
 
+
 ## Game Rules:
     * After launch, the player is expected to start their trials with guessing the hidden number.
     * The player is expected to input only digits within the provided range. Failure to do so will results in points being lost.
