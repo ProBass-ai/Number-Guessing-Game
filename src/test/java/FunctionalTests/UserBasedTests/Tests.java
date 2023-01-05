@@ -1,13 +1,13 @@
-import org.junit.Assert;
+package FunctionalTests.UserBasedTests;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
-
-
 import static org.junit.Assert.assertEquals;
 
 
-public class Test1 {
+
+public class Tests {
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
@@ -31,8 +31,12 @@ public class Test1 {
                  
                 """;
 
-        Main.main(new String[]{""});
+
+        app.Main.main(new String[0]);
 
         assertEquals(expectedText, systemOutRule.getLog());
     }
+
+
+
 }
