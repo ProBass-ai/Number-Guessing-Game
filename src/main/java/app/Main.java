@@ -1,12 +1,13 @@
+package app;
+
 import java.util.Scanner;
-import java.util.Random;
+
 
 public class Main {
 
     Scanner consoleScanner = new Scanner(System.in);
 
-    int turns = 10;
-    int mysteryNumber;
+
 
     static String introductoryText = """
                 **********************************************
