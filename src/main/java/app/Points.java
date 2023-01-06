@@ -10,7 +10,7 @@ public class Points {
 
     public void subtract()
     {
-        points -= 1;
+        points = ( points > 0 ) ? points - 1 : 0;
     }
 
     public int getPoints()
