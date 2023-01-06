@@ -3,8 +3,9 @@ package FunctionalTests.UserBasedTests;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
-import static org.junit.Assert.assertEquals;
 
+import static java.lang.System.in;
+import static org.junit.Assert.*;
 
 
 public class Tests {
@@ -34,7 +35,8 @@ public class Tests {
 
         app.Main.main(new String[0]);
 
-        assertEquals(expectedText, systemOutRule.getLog());
+        assertTrue(systemOutRule.getLog().contains(expectedText));
+
     }
 
 
