@@ -8,7 +8,7 @@ public class Turns {
         return this.turns;
     }
 
-    public void lower()
+    public void decrease()
     {
         this.turns -= 1;
     }
