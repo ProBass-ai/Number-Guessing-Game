@@ -80,7 +80,9 @@ public class Main {
                 System.out.println("Correct! The number is: " + mystery.getMysteryNumber());
             } else
             {
+
                 turns.decrease();
+
             }
         } while ( turns.getTurns() != 0 );
 
