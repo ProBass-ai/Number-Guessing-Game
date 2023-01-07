@@ -4,8 +4,8 @@ import java.util.Random;
 
 
 public class Mystery {
-    int mysteryNumber;
-    Random rand = new Random();
+    private int mysteryNumber;
+    private Random rand = new Random();
 
 
     public void generate()

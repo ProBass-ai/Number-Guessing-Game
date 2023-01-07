@@ -1,6 +1,6 @@
 package app;
 
-public class Points {
+public class Points extends Player{
     private int points = 0;
 
     public void add()

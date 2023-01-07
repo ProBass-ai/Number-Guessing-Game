@@ -1,6 +1,6 @@
 package app;
 
-public class Turns {
+public class Turns extends Player {
     private int turns = 10;
 
     public int getTurns()
