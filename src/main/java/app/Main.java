@@ -48,9 +48,8 @@ public class Main {
                 return input;
             }
         }
-
-
     }
+
 
     static void start()
     {
@@ -78,13 +77,17 @@ public class Main {
             if (Integer.parseInt(guess) == mystery.getMysteryNumber())
             {
                 System.out.println("Correct! The number is: " + mystery.getMysteryNumber());
+                break;
+
             } else
             {
-
+                System.out.println("Sorry " + player.getName() + ", please try again.");
                 turns.decrease();
 
             }
         } while ( turns.getTurns() != 0 );
+
+        if (turns.getTurns() == 0) System.out.println("The number is: " + mystery.getMysteryNumber());
 
     }
 
