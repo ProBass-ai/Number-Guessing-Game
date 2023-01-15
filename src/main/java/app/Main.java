@@ -21,6 +21,7 @@ public class Main {
                  * Enjoy!!!
                 """;
 
+
     static void phaseIntro()
     {
         System.out.println(introductoryText);
@@ -31,7 +32,34 @@ public class Main {
         System.out.println(query);
     }
 
-    static String input()
+    static int numberInput()
+    {
+        String input;
+
+        while (true)
+        {
+            input = consoleScanner.nextLine();
+
+            if (input.isEmpty() || input.isBlank())
+            {
+                System.out.println("Input empty, please try again!");
+                input = consoleScanner.nextLine();
+            } else
+            {
+                try {
+
+                    return Integer.parseInt(input);
+
+                } catch (NumberFormatException nfe) {
+                    System.out.println("Please enter a valid integer...");
+                }
+
+            }
+        }
+    }
+
+
+    static String stringInput()
     {
         String input;
 
@@ -61,7 +89,7 @@ public class Main {
 
         Player player = new Player();
 
-        player.setPlayerName(input());
+        player.setPlayerName(stringInput());
 
         Mystery mystery = new Mystery(); mystery.generate();
 
@@ -72,9 +100,9 @@ public class Main {
         do {
             queryPlayerTo("Enter your guess:");
 
-            String guess = input();
+            int guess = numberInput();
 
-            if (Integer.parseInt(guess) == mystery.getMysteryNumber())
+            if ((guess == mystery.getMysteryNumber()))
             {
                 System.out.println("Correct! The number is: " + mystery.getMysteryNumber());
                 break;

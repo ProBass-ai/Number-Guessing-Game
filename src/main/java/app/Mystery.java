@@ -1,11 +1,11 @@
 package app;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 
 public class Mystery {
     private int mysteryNumber;
-    private Random rand = new Random();
+    private SecureRandom rand = new SecureRandom();
 
 
     public void generate()
